@@ -1,16 +1,16 @@
 # Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.Python
+
+# Virtual environment
+.venv/
 env/
 venv/
 
-# pytest
-.pytest_cache/
-.coverage
-
 # IDE
-.idea/
 .vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
