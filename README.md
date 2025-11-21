@@ -1,23 +1,112 @@
-#AI/ML Intern Assignment
+# Trigram Language Model – ML Intern Assignment
 
-Welcome to the AI/ML Intern assignment! This project is designed to test your core Python skills and your ability to design and build a clean and efficient system from scratch.
+This repository contains my implementation of the N-Gram Language Model (Trigram Model) and the optional Scaled Dot-Product Attention task.
 
-## Quick Start
+---
 
-1. Clone or fork this repository.
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Open the trigram-assignment/src/ngram_model.py file and implement the TrigramModel class.
-4. Run the tests to check your implementation: `pytest trigram-assignment/tests/test_ngram.py`
+## Project Structure
 
+```
+ml-assignment/
+│
+├── data/
+│   └── example_corpus.txt
+│
+├── src/
+│   ├── ngram_model.py
+│   ├── generate.py
+│   └── utils.py
+│
+├── tests/
+│   └── test_ngram.py
+│
+├── attention/
+│   ├── scaled_attention.py
+│   └── demo.py
+│
+├── README.md
+└── evaluation.md
+```
 
-## Instructions
+---
 
-1. Any changes to env should be updated in `requirements.txt`.
-2. Mention the steps to run your code in `trigram-assignment/README.md`.
-3. Feel free to make any changes to the existing code.
-4. Please document your design choices in the `evaluation.md` file. This should be a 1-page summary of the decisions you made and why you made them. And all the steps to for us to test.
-5. Please mind the second task is optional.
+## Installation
 
+Create a virtual environment:
 
+```bash
+python -m venv .venv
+```
 
-For more detailed instructions, please refer to the `ASSIGNMENT.md` file.
+Activate:
+
+```bash
+source .venv/bin/activate       # Linux / Mac
+.venv\Scripts\activate          # Windows
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run the Trigram Model
+
+Generate text using the example corpus:
+
+```bash
+python src/generate.py
+```
+
+This loads `data/example_corpus.txt`, trains a trigram model, and prints generated text.
+
+---
+
+## Run Tests
+
+```bash
+pytest tests/test_ngram.py
+```
+
+Expected:
+
+```
+3 passed in X.XXs
+```
+
+---
+
+## Optional Task 2 – Scaled Dot-Product Attention
+
+Run the demo:
+
+```bash
+python -m attention.demo
+```
+
+The script prints:
+
+- Q, K, V matrices  
+- Mask  
+- Attention weights  
+- Final output  
+
+This verifies correctness of the NumPy-based implementation.
+
+---
+
+## Evaluation Report
+
+See `evaluation.md` for full design explanations and implementation decisions.
+
+---
+
+## Status
+
+- ✔ Completed Trigram Model  
+- ✔ All tests pass  
+- ✔ Optional attention task implemented  
+- ✔ Clean, documented structure  
